@@ -1,7 +1,7 @@
 # FILE NAME - firewall_traffic_analyzer.py
 
-# NAME: 
-# DATE: 
+# NAME: Olivia Mincer
+# DATE: October 1, 2025
 # BRIEF DESCRIPTION:  
 
 
@@ -15,13 +15,26 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+print("=== Network Traffic Security Analyzer ===")
+
+port_input = int(input("Enter the port number (e.g., 80, 22, 443, 3389): "))
+data_size = int(input("Enter the data transfer size in megabytes (MB): "))
 
 
+print("FIREWALL LOG:")
+print(f"Port: {port_input}, Transfer Size: {data_size} MB")
 
+if port_input == 22 and data_size >= 100 or port_input == 3389 and data_size >= 100:
+    print("HIGH RISK: Potential unauthorized remote access detected!")
 
+elif port_input == 80 and data_size > 100:
+      print("MEDIUM RISK: Large unencrypted data transfer detected.")
 
+elif port_input == 443:
+     print("LOW RISK: Secure encrypted transfer detected.")
 
-
+else:
+    print("UNKNOWN: Unrecognized traffic pattern.")
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
