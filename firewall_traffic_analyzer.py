@@ -14,7 +14,7 @@
 
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
-
+print("'''")
 print("=== Network Traffic Security Analyzer ===\n")
 
 port_input = int(input("Enter the port number (e.g., 80, 22, 443, 3389): "))
@@ -36,7 +36,7 @@ elif port_input == 443:
 else:
     print("Risk Assessment: UNKNOWN: Unrecognized traffic pattern.")
 print("------------------------")
-
+print("'''")
 ########### END YER CODE ABOVE THIS LINE ###########
 
     
